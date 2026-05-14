@@ -76,9 +76,6 @@ void switchModes(OpenGL* sender, KeyEventArg arg)
     case 'L':
         lightning = !lightning;
         break;
-    case 'T':
-        texturing = !texturing;
-        break;
     case 'A':
         alpha = !alpha;
         break;
@@ -899,7 +896,7 @@ void Render(double delta_time)
     // Верхний правый угол (ширина_окна - 1, высота_окна - 1)
 
     std::wstringstream ss;
-    ss << std::fixed << std::setprecision(3) << "T - " << (texturing ? L"[вкл]выкл" : L"вкл[выкл]") << L" текстур\n"
+    ss << std::fixed << std::setprecision(3)
        << "L - " << (lightning ? L"[вкл]выкл" : L"вкл[выкл]") << L" освещение\n"
        << "A - " << (alpha ? L"[вкл]выкл" : L"вкл[выкл]") << L" альфа-наложение\n"
 	   << L"M - воспроизвести анимацию детского мата\n"
